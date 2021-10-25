@@ -92,7 +92,11 @@
                 (data)=>{
                     if(!data.Poster)
                         {
-                            alert("MOVIE NOT FOUND!!");
+                            // alert("MOVIE NOT FOUND!!");
+                            let image=document.createElement("img");
+                            image.style.marginLeft="400px";
+                            image.src="https://thecinemaholic.com/wp-content/uploads/2017/06/error-not-found-404.jpg"
+                            document.getElementById("poster").append(image);
                             return 
                         }
                         console.log(data);
