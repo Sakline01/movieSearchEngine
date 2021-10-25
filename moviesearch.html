@@ -110,7 +110,12 @@
                     let h4=document.createElement("h4");
                     h4.textContent=`Runtime:${data.Runtime}`;
                     h4.style.marginTop="20px"
-                    div2.append(p,p2,h4);
+                    let h42=document.createElement("h4");
+                    if (Number(data.imdbRating)>8.5) {
+                        h42.textContent=`Recomended: Yes`;
+                        h42.style.color="Green";
+                    }
+                    div2.append(p,p2,h4,h42);
                     bigdiv.append(div,div2);
                     document.getElementById("poster").append(bigdiv);
                 }
